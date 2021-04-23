@@ -118,6 +118,10 @@ questions.push(new Question('How many french open titles has nadal won?','10','1
 
 questions.push(new Question('How many career weeks has Serena Williams spent as number 1?','319','19','119','219',1));
 
-welcomeMessage();
-quizResponse = questions.map(handleQuestion);
-printStats(quizResponse);
+const main = () => {
+  welcomeMessage();
+  quizResponse = questions.map(handleQuestion);
+  printStats(quizResponse);
+}
+
+main();
