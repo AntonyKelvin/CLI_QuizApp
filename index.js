@@ -106,22 +106,24 @@ function printStats(response){
   console.log('\t Total number of questions: ' + response.length);
 }
 
-//Since we can add more question I made question let
-let questions = [];
-questions.push(new Question('What are the four most prestigious grand slam events?','Ryder Cup, U.S. Open, Wimbledon, British Open','British Open, Wimbledon, Australian Open, German Open','Wimbledon, U.S. Open, Australian Open, French Open','German Open, British Open, Australian Open, French Open',3));
-
-questions.push(new Question('How many times has Roger Federer retired mid-match?','5','8','1','Never',4));
-
-questions.push(new Question('Where did Novak Djokovic reach his first final as a 20 year old in 2007?','French Open','Wimbledon','US Open','Australian Open',3));
-
-questions.push(new Question('How many french open titles has nadal won?','10','11','12','13',3));
-
-questions.push(new Question('How many career weeks has Serena Williams spent as number 1?','319','19','119','219',1));
 
 const main = () => {
+  //Since we can add more question I made question let
+  let questions = [];
+  questions.push(new Question('What are the four most prestigious grand slam events?','Ryder Cup, U.S. Open, Wimbledon, British Open','British Open, Wimbledon, Australian Open, German Open','Wimbledon, U.S. Open, Australian Open, French Open','German Open, British Open, Australian Open, French Open',3));
+
+  questions.push(new Question('How many times has Roger Federer retired mid-match?','5','8','1','Never',4));
+
+  questions.push(new Question('Where did Novak Djokovic reach his first final as a 20 year old in 2007?','French Open','Wimbledon','US Open','Australian Open',3));
+
+  questions.push(new Question('How many french open titles has nadal won?','10','11','12','13',3));
+
+  questions.push(new Question('How many career weeks has Serena Williams spent as number 1?','319','19','119','219',1));
+
   welcomeMessage();
   quizResponse = questions.map(handleQuestion);
   printStats(quizResponse);
 }
 
 main();
+
